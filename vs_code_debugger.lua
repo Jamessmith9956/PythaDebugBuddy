@@ -265,7 +265,7 @@ function debug_main()
     compatibility()
     load_all_lua_files()
 
-    demo_sample()
+    test_calculate_sizing_fit()
 end
 
 debug_main()
