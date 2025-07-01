@@ -266,6 +266,10 @@ function debug_main()
     load_all_lua_files()
 
     test_calculate_sizing_fit()
+    test_calculate_sizing_grow()
+    test_complex_sizing()
+    test_fixed_divisions()
+    test_positioning_calculation()
 end
 
 debug_main()
