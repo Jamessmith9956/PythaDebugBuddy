@@ -53,6 +53,18 @@ function compatibility()
         end
     end
 
+    if not pyio then
+        pyio = {
+            save_values = function (string, values)
+                print("pyio.save_values("..tostring(string).."): " .. table_tostring(values))
+            end,
+            load_values = function (string)
+                print("Attempting to load values for : "..tostring(string))
+                return {}
+            end,
+        }
+    end
+
     local get_dialog_handle = function ()
         local dialog_handle = {
             data = {},
@@ -270,6 +282,8 @@ function debug_main()
     test_complex_sizing()
     test_fixed_divisions()
     test_positioning_calculation()
+    test_integration()
+    test_cabinet_generation()
 end
 
 debug_main()
